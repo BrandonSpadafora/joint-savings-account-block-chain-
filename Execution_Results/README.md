@@ -1,6 +1,5 @@
-# Unit 20 - "Joint Savings Account"
+# Joint Savings Account(blockchain)
 
-![alt=“”](Images/20-5-challenge-image.png)
 
 ### Background
 
@@ -26,11 +25,9 @@ The steps for this homework are divided into the following sections:
 
 #### Step 1: Create a Joint Savings Account Contract in Solidity
 
-1. From the provided [starter code](Starter_Code), open the Solidity file named `joint_savings.sol` in the Remix IDE.
+ Define a new contract named `JointSavings`.
 
-2. Define a new contract named `JointSavings`.
-
-3. Define the following variables in the new contract:
+ Define the following variables in the new contract:
 
     * Two variables of type `address payable` named `accountOne` and `accountTwo`
 
@@ -39,7 +36,7 @@ The steps for this homework are divided into the following sections:
     * Two variables of type `uint public` named `lastWithdrawAmount` and `contractBalance`
 
 
-4. Define a function named `withdraw` that accepts two arguments: `amount` of type `uint` and `recipient` of type `payable address`. In this function, code the following:
+ Define a function named `withdraw` that accepts two arguments: `amount` of type `uint` and `recipient` of type `payable address`. In this function, code the following:
 
     * Define a `require` statement that checks if `recipient` is equal to either `accountOne` or `accountTwo`. If it isn’t, the `require` statement returns the “You don't own this account!” text.
 
@@ -62,7 +59,7 @@ The steps for this homework are divided into the following sections:
 
 7. Add a fallback function so that your contract can store ether that’s sent from outside the deposit function.
 
-#### Step 2: Compile and Deploy Your Contract in the JavaScript VM
+#### Step 2: Compile and Deploy Contract in the JavaScript VM
 
 1. Compile your smart contract. If an error occurs, review your code, and make the necessary changes for a successful compilation.
 
@@ -78,12 +75,11 @@ To interact with your deployed smart contract, complete the following steps:
 
 1. Use the `setAccounts` function to define the authorized Ethereum address that will be able to withdraw funds from your contract.
 
-     > **Note** You can either use the following Ethereum addresses or create new, dummy addresses on the [Vanity-ETH](https://vanity-eth.tk/) website, which includes an Ethereum vanity address generator.
-    >
-    > ```text
+     ### Note:
+     I used dummy accounts
     > Dummy account1 address: 0x0c0669Cd5e60a6F4b8ce437E4a4A007093D368Cb
     > Dummy account2 address: 0x7A1f3dFAa0a4a19844B606CD6e91d693083B12c0
-    > ```
+    
 
 2. Test the deposit functionality of your smart contract by sending the following amounts of ether. After each transaction, use the `contractBalance` function to verify that the funds were added to your contract:
 
@@ -97,15 +93,6 @@ To interact with your deployed smart contract, complete the following steps:
 
 3. Once you’ve successfully deposited funds into your contract, test the contract’s withdrawal functionality by withdrawing 5 ether into `accountOne` and 10 ether into `accountTwo`. After each transaction, use the `contractBalance` function to verify that the funds were withdrawn from your contract. Also, use the `lastToWithdraw` and `lastWithdrawAmount` functions to verify that the address and amount were correct.
 
----
-
-### Submission
-
-* Upload the files for this assignment to your GitHub repository.
-
-* Submit the link to your GitHub repo on Bootcamp Spot.
-
----
-
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+### Credits
+I took most of the readme from unit 20's homework assignment so I could remember exactly what I did and why I did it because I struggle with blockchain
 
